@@ -1,0 +1,3 @@
+Create a script to run the program from the command promp ? make sure that when you are building a package you need to put __init__.py in the file so that python knows it is a package
+
+you can have a directory for tests and python knows it 

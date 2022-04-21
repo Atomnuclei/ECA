@@ -16,13 +16,13 @@ from matplotlib import pyplot as plt
 ################################################################################################################################
 #program
 
-length=100
-time=100
+LENGHT=100
+TIME=100
 rule_number=1777
 
 # make the initial condition
 initial_condition = []
-for i in range(length):
+for i in range(LENGHT):
     initial_condition.append(random.randint(0,2))
 
 #Possible imputs (list of tuples)
@@ -50,12 +50,12 @@ spacetime_field = [initial_condition]
 current_configuration = initial_condition.copy()
 
 #run program
-for t in range(time):
+for t in range(TIME):
     
     #placeholder
     new_configuration=[]
     
-    for i in range(length):
+    for i in range(LENGHT):
         neighborhood=(current_configuration[(i-1)],
                       current_configuration[i])
         
@@ -72,11 +72,6 @@ plt.show()
 
 
 # In[2]:
-
-
-import random
-from matplotlib import pyplot as plt
-
 
 #Functions
 def ter(n):
@@ -147,7 +142,7 @@ class ECA(object):
         self.current_configuration=initial_condition.copy()
         
         #Private:
-        self._length=len(initial_condition)
+        self._LENGHT=len(initial_condition)
     
     def evolve(self,time_steps):
         #run program
@@ -155,7 +150,7 @@ class ECA(object):
     
             #placeholder
             new_configuration=[]
-            for i in range(self._length):
+            for i in range(self._LENGHT):
                 neighborhood=(self.current_configuration[(i-1)],
                               self.current_configuration[i])
 
@@ -169,24 +164,26 @@ class ECA(object):
 ################################################################################################################################
 #program
 
-length=100
-time=50
+LENGHT=100
+TIME=50
 rule_number=1777
 
 # Create initial condition
-initial_condition = list(random.randint(0,2) for _ in range(length))
+initial_condition = list(random.randint(0,2) for _ in range(LENGHT))
 
 program=ECA(rule_number,initial_condition)
-program.evolve(time)
+program.evolve(TIME)
 
 # plot the spacetime field diagram
 plotting(program.spacetime)
 
 
-# In[1]:
+# In[2]:
 
 
 get_ipython().system('jupyter nbconvert --to script 3_state_CA.ipynb')
 
 
 # 
+
+# %%

@@ -1,17 +1,17 @@
-#%%
 
 
-def foo (a=1):
-    ""
+def food (a=1):
     
-    ""
     return a
 
-print(foo())
+print(food())
 
 a=3
 
 
 
+
+
+# %%
 
 # %%

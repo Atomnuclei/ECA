@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
+# In[1]:
 
 
 #Name: Rodrigo Becerra Silva
@@ -71,7 +71,7 @@ plt.imshow(spacetime_field, cmap=plt.cm.Greys, interpolation='nearest')
 plt.show()  
 
 
-# In[1]:
+# In[2]:
 
 
 import random
@@ -183,7 +183,7 @@ program.evolve(time)
 plotting(program.spacetime)
 
 
-# In[2]:
+# In[1]:
 
 
 get_ipython().system('jupyter nbconvert --to script 3_state_CA.ipynb')
